@@ -1,0 +1,52 @@
+body {
+  background-image: url('background.jpeg');
+  background-size: contain; 
+  background-repeat: no-repeat;
+}
+
+#rain-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.raindrop {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  
+  background-image: url('heart.png'); /* Add the image */
+  background-size: cover; /* Adjust the size of the image */
+  animation: rain 1s linear infinite;
+}
+
+#button {
+  height: 70px;
+  position: absolute; /* Add this line */
+  bottom: 0; /* Add this line */
+  left: 50%; /* Add this line */
+  transform: translateX(-50%); /* Add this line */
+  margin: 50px 0;
+  border: none; /* Remove the border */
+  background: red; /* Remove the background */
+  padding: 50; /* Remove padding */
+  font: inherit; /* Inherit font styles */
+  cursor: pointer; /* Set cursor to pointer */
+  color: white;
+  /*font-size:2rem;*/
+  border-radius: 10px;
+  box-shadow: 
+    -5px -5px 5px #a70900 inset,
+    5px 5px 5px #ff7773 inset;
+    ;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+@keyframes rain {
+  0% { transform: translateY(-20px) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(0deg); }
+}
